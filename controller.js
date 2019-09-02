@@ -35,17 +35,20 @@ class oauth2Controller extends baseController {
 
     try {
       const tokenResult = await axios.request({
-        method: 'get',
+        method: 'POST',
         baseURL: authServer,
         url: tokenPath,
-        params: Object.assign({
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        data: {
           grant_type: 'authorization_code',
           client_id: clientId,
           client_secret: clientSecret,
           code: oauthcode,
-          oauthstate: oauthstate,
-          redirect_uri: encodeURIComponent(redirectUri)
-        }, authArgs)
+          redirect_uri: redirectUri
+        }
       });
 
       if (tokenResult.status === 200) {

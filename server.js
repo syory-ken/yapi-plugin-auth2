@@ -34,9 +34,9 @@ module.exports = function (options) {
         method: 'get',
         baseURL: authServer,
         url: infoPath,
-        params: Object.assign({
-          access_token: token
-        }, authArgs)
+        headers: {
+          'Authorization': 'Bearer ' + token
+        }
       });
 
       if (info.status === 200) {

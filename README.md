@@ -1,4 +1,4 @@
-# yapi-plugin-auth2
+# yapi-plugin-ouath2
 
 第三方插件，基于Oauth2协议登录，在生成的配置文件中，添加如下配置即可：
 
