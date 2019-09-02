@@ -74,7 +74,7 @@ class oauth2Controller extends baseController {
  */
 function loadOpts() {
   return find(yapi.WEBCONFIG.plugins, (plugin) => {
-    return plugin.name === 'auth2';
+    return plugin.name === 'ouath2';
   })
 }
 
