@@ -5,23 +5,23 @@
 ```
   "plugins": [
     {
-      "name": "auth2",
-      "options": {
-        "type": "oauth2",
-        "clientId": "your client id",
-        "clientSecret": "your client secret",
-        "authServer": "http://your.yapiserver",
-        "authPath": "登录页面地址",
-        "tokenPath": "code换取token接口地址",
-        "infoPath": "用户信息接口地址",
-        "redirectUri": "http://your.yapiserver/api/plugin/oauth2/callback",
-        "userKey": "usernamekey",
-        "emailKey": "emailkey",
-        "buttonName": "统一登录",
-        "authArgs": {
-          "login_type": "oa"
+      "name": "ouath2",
+        "options": {
+          "type": "oauth2",
+          "clientId": "4",
+          "clientSecret": "G8GqbbInIftU1MZzK3mg1utgTAMfl0Of3BxMOP82",
+          "authServer": "http://ms_passport.test",
+          "authPath": "/oauth/authorize",
+          "tokenPath": "/oauth/token",
+          "infoPath": "/api/user",
+          "redirectUri": "http://192.168.31.136:3000/api/plugin/oauth2/callback",
+          "userKey": "name",
+          "emailKey": "email",
+          "buttonName": "授权登录",
+          "authArgs": {
+              "login_type": "oa"
+          }
         }
-      }
     }
   ]
 ```
